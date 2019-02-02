@@ -1,0 +1,880 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Sweet Treets</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="res/cropped-cake_20-192x192.png" sizes="192x192" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styleconverter.css" />
+    <script type="text/javascript" src="javascript.js"></script>
+    <script type="text/javascript" src="jsconverter.js"></script>
+</head>
+<body id="page-top" onload="showtime(); starttimer();">
+    <header class="main_head">
+        <button class="toggle_mnu" style="background: red!important">
+            <span class="sandwich">
+                <span class="sw-topper"></span>
+                <span class="sw-bottom"></span>
+                <span class="sw-footer"></span>
+            </span>
+        </button>
+        <nav class="top_mnu">
+            <ul>
+                <li><a class="dr-icon dr-icon-user" href="#main_">Main</a></li>
+                <li><a class="dr-icon dr-icon-camera" href="#all_cakes">All cakes</a></li>
+                <li><a class="dr-icon dr-icon-bullhorn" href="#master_class">Master class</a></li>
+                <li><a class="dr-icon dr-icon-heart" href="#personal_cake">Personal cakes</a></li>
+                <li><a class="dr-icon dr-icon-download" href="#feedback">Feedback</a></li>
+                <li><a class="dr-icon dr-icon-switch" href="#about">About us</a></li>
+                <li><a class="dr-icon dr-icon-settings" href="#reservation">Reservation</a></li>
+                <li><a href="#converter">Converter</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="gridSystemModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="background-color: orange;">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <center>
+                        <h4 class="modal-title" id="gridModalLabel" style="text-transform: uppercase; margin-top: 20px; font-size: 30px; font-weight: 600;font-family: 'Pattaya', sans-serif;">Order form</h4>
+                        <h3 class="modal-title" id="gridModalLabel" style="font-family: 'Pattaya', sans-serif;">pastry services</h3>
+                    </center>
+                </div>
+                <form method="POST" action="http://formspree.io/mukhtarov.merey@gmail.com">
+                    <div class="modal-body">
+                        <center>
+                            <div class="form-group">
+                                <input type="text" name="name" required="" class="form-control1" id="name" placeholder="Name" style="border-style:
+    solid;font-family: 'Pattaya', sans-serif;  border-color: #deb38d; text-align: left;
+border-radius: 6px; font-size: 20px; padding: 7px 17px">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="surname" required="" class="form-control1" id="surname" placeholder="Surname" style="
+border-style: solid;  border-color: #deb38d; text-align: left;font-family: 'Pattaya', sans-serif;
+border-radius: 6px; font-size: 20px; padding: 7px 17px;">
+                            </div>
+                            <div class="form-group">
+                                <input type="date" name="date" required="" class="form-control1" id="date" placeholder="Date" style="
+border-style: solid;  border-color: #deb38d; text-align: left;font-family: 'Pattaya', sans-serif;
+border-radius: 6px; font-size: 20px; padding: 7px 17px;">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="cake" required="" class="form-control1" id="cake" placeholder="Which cake" style="
+border-style: solid;  border-color: #deb38d; text-align: left;font-family: 'Pattaya', sans-serif;
+border-radius: 6px; font-size: 20px; padding: 7px 17px;">
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" name="tel" required="" maxlength="12" class="form-control1" id="child" placeholder="Phone number" style="
+border-style: solid;  border-color: #deb38d; text-align: left;font-family: 'Pattaya', sans-serif;
+border-radius: 6px; font-size: 20px; padding: 7px 17px;">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" required="" class="form-control1" id="email" placeholder="Email" style="
+border-style: solid;  border-color: #deb38d; text-align: left;font-family: 'Pattaya', sans-serif;
+border-radius: 6px; font-size: 20px; padding: 7px 17px;">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="adress" required="" class="form-control1" id="adress" placeholder="Adress" style="
+border-style: solid;  border-color: #deb38d; text-align: left;font-family: 'Pattaya', sans-serif;
+border-radius: 6px; font-size: 20px; padding: 7px 17px;">
+                            </div>
+                            <h5 class="modal-title" id="gridModalLabel" style="font-size: 25px; font-family: 'Pattaya', sans-serif;">We will contact you within</h5>
+                            <h3 class="modal-title" id="gridModalLabel" style="font-size: 30px; text-transform: uppercase; font-weight: 500;font-family: 'Pattaya', sans-serif;">20 min</h3>
+                        </center>
+                        <div class="modal-footer">
+                            <center>
+                                <button type="submit" style="font-size: 20px; font-weight: bold; background-color: orange; border: 3px solid red;" class="btn btn-default">order</button>
+                            </center>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <section id="main_">
+        <div class="container top_wrapper">
+            <div class="col-xs-12">
+                <img src="res/nadpis.png" class="img img-responsive" alt="" width="50%" style="margin-bottom: -51px!important" />
+                <br />
+                <h1 class="header-title" style="color: red; font-weight: 333!important; font-size: 33px;">Make your life sweet</h1>
+                <p>
+                </p>
+                <div class="row">
+                    <button class="btn" data-toggle="modal" data-target="#gridSystemModal" style="color: red; font-weight: 1000; border: 3px solid red">
+                        place an order
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="all_cakes" id="all_cakes" style="background-color: #EEE9E9; padding-bottom: 80px;padding-top: 50px">
+        <div class="container-fluid1" ">
+            <h2 style="color: orange;font-size:50px">Assortment</h2>
+            <div class="links" style="border-bottom: 5px solid orange">
+                <div class="arrow_box active" style="background: none">
+                    <a href="#" id="login-form-link" style="font-family: 'Pattaya', sans-serif; font-size:26px!important;background-color:#EEE9E9;
+padding: 0px 20px;">cakes</a>
+                </div>
+                <div class="arrow_box" style="background: none">
+                    <a href="#" id="register-form-link" style="font-family: 'Pattaya',sans-serif; font-size:26px!important;background-color:#EEE9E9; padding: 0px 20px; border-color: orange">pies</a>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="col-md-12" id="login-form">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-12 all_cakes_container">
+                                                <div id="custom_carousel" class="carousel slide" data-ride="carousel" data-interval="0">
+                                                    <div class="row clearfix">
+                                                        <div class="col-md-9 col-sm-9 column">
+                                                            <div class="carousel-inner">
+                                                                <div class="item active">
+                                                                    <div class="container-fluid">
+                                                                        <div class="row row-eq-height" style="border: 5px solid orange">
+                                                                            <div class="col-md-8">
+                                                                                <img src="res/teramisu.png" style="border-radius: 90px; padding: 5px">
+                                                                            </div>
+                                                                            <div class="col-md-4" style="position: relative;">
+                                                                                <div class="cake_context">
+                                                                                    <h3 style="font-family: 'Charm', cursive; font-weight: 700; color: teal">Tiramisu 22 cm</h3>
+                                                                                    <p>
+                                                                                    <p style="font-family: 'Charm', cursive; color: teal; font-weight: 500!important">Tiramisu is a very delicate, airy Italian dessert, with an amazing contrast of sweet cream and bitter taste of strong coffee. Dusted with cocoa. The diameter of the cake is 22 cm. Price 3000 tg.</p>
+                                                                                    </p>
+                                                                                </div>
+                                                                                <button class="btn" data-toggle="modal" data-target="#gridSystemModal" style="background-color: orange">
+                                                                                    order
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item">
+                                                                    <div class="container-fluid">
+                                                                        <div class="row row-eq-height" style="border: 5px solid orange">
+                                                                            <div class="col-md-8">
+                                                                                <img src="res/красный_бархат.png" style="border-radius: 90px; padding: 5px">
+                                                                            </div>
+                                                                            <div class="col-md-4" style="position: relative;">
+                                                                                <div class="cake_context">
+                                                                                    <h3 style="font-family: 'Charm', cursive; font-weight: 700; color: teal">Red Velvet 20 cm</h3>
+                                                                                    <p>
+                                                                                    <p style="font-family: 'Charm', cursive; color: teal; font-weight: 500!important">A popular American cake made from red fluffy sponge cake and cream cheese. Deliciously delicate taste will decorate your tea. The diameter of the cake is 20 cm. Price 3800 tg.</p>
+                                                                                    </p>
+                                                                                </div>
+                                                                                <button class="btn" data-toggle="modal" data-target="#gridSystemModal" style="background-color: orange">
+                                                                                    order
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item">
+                                                                    <div class="container-fluid">
+                                                                        <div class="row row-eq-height" style="border: 5px solid orange">
+                                                                            <div class="col-md-8">
+                                                                                <img src="res/med.png" style="border-radius: 90px; padding: 5px" alt="" class="img img-responsive">
+                                                                            </div>
+                                                                            <div class="col-md-4" style="position: relative;">
+                                                                                <div class="cake_context">
+                                                                                    <h3 style="font-family: 'Charm', cursive; font-weight: 700; color: teal">Honey cake 24 cm</h3>
+                                                                                    <p>
+                                                                                    <p style="font-family: 'Charm', cursive; color: teal; font-weight: 500!important">Honey cake - an air cake made from natural cream. Decorated with crumbs and dusted with icing sugar. The diameter of the cake 24 cm. Price 4500 tg.</p>
+                                                                                    </p>
+                                                                                </div>
+                                                                                <button class="btn" data-toggle="modal" data-target="#gridSystemModal" style="background-color: orange">
+                                                                                    order
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item">
+                                                                    <div class="container-fluid">
+                                                                        <div class="row row-eq-height" style="border: 5px solid orange">
+                                                                            <div class="col-md-8">
+                                                                                <img src="res/моло_дев.png" style="border-radius: 90px; padding: 5px">
+                                                                            </div>
+                                                                            <div class="col-md-4" style="position: relative;">
+                                                                                <div class="cake_context">
+                                                                                    <h3 style="font-family: 'Charm', cursive; font-weight: 700; color: teal">Milk girl 24 cm</h3>
+                                                                                    <p>
+                                                                                    <p style="font-family: 'Charm', cursive; color: teal; font-weight: 500!important">
+                                                                                        «Milchmädchen». Cakes based on condensed milk. The cream contains natural cream. There are no fats.<br />
+                                                                                        The diameter of the cake 24 cm. Price 4500 tg.
+                                                                                    </p>
+                                                                                    </p>
+                                                                                </div>
+                                                                                <button class="btn" data-toggle="modal" data-target="#gridSystemModal" style="background-color: orange">
+                                                                                    order
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item">
+                                                                    <div class="container-fluid">
+                                                                        <div class="row row-eq-height" style="border: 5px solid orange">
+                                                                            <div class="col-md-8">
+                                                                                <img src="res/красный_бархат.png" style="border-radius: 90px; padding: 5px" alt="" class="img img-responsive">
+                                                                            </div>
+                                                                            <div class="col-md-4" style="position: relative;">
+                                                                                <div class="cake_context">
+                                                                                    <h3 style="font-family: 'Charm', cursive; font-weight: 700; color: teal">Red Velvet 24 cm</h3>
+                                                                                    <p>
+                                                                                    <p style="font-family: 'Charm', cursive; color: teal; font-weight: 500!important">A popular American cake made from red fluffy sponge cake and cream cheese. Deliciously delicate taste will decorate your tea. The diameter of the cake 24 cm. Price 5500 tg. </p>
+                                                                                    </p>
+                                                                                </div>
+                                                                                <button class="btn" data-toggle="modal" data-target="#gridSystemModal" style="background-color: orange">
+                                                                                    order
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item">
+                                                                    <div class="container-fluid">
+                                                                        <div class="row row-eq-height" style="border: 5px solid orange">
+                                                                            <div class="col-md-8">
+                                                                                <img src="res/teramisu.png" style="border-radius: 90px; padding: 5px" alt="" class="img img-responsive">
+                                                                            </div>
+                                                                            <div class="col-md-4" style="position: relative;">
+                                                                                <div class="cake_context">
+                                                                                    <h3 style="font-family: 'Charm', cursive; font-weight: 700; color: teal">Tiramisu 26 cm</h3>
+                                                                                    <p>
+                                                                                    <p style="font-family: 'Charm', cursive; color: teal; font-weight: 500!important">Tiramisu is a very delicate, airy Italian dessert, with an amazing contrast of sweet cream and bitter taste of strong coffee. Dusted with cocoa. The diameter of the cake is 26 cm. Price 4500 tg.</p>
+                                                                                    </p>
+                                                                                </div>
+                                                                                <button class="btn" data-toggle="modal" data-target="#gridSystemModal" style="background-color: orange">
+                                                                                    order
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <a class="left carousel-control" href="#custom_carousel" role="button" data-slide="prev" style=" position: absolute; margin-left: -40px; color: black">
+                                                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true" style="color: black !important"></span>
+                                                                <span class="sr-only">Previous</span>
+                                                                <span class="fa fa-angle-left"></span>
+                                                            </a>
+                                                            <a class="right carousel-control" href="#custom_carousel" role="button" data-slide="next" style=" position: absolute; margin-right: -40px; color: black !important">
+                                                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                                                <span class="sr-only">Next</span>
+                                                                <span class="fa fa-angle-right"></span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="col-md-3 col-sm-3 column" style="border: 5px solid orange">
+                                                            <div class="controls">
+                                                                <ul class="nav">
+                                                                    <li data-target="#custom_carousel" data-slide-to="0" class="active" style="border-bottom: 2px solid orange">
+                                                                        <a href="#">
+                                                                            <div style="display: inline-block; width: 40%">
+                                                                                <img src="  res/teramisu.png" height="25%" width="100%" style="border-radius: 20px">
+                                                                            </div>
+                                                                            <div style="display: inline-block; width: 55%">
+                                                                                <small style="font-family: 'Charm', cursive; color: teal; font-weight: 500!important">
+                                                                                    Tiramisu 22 cm
+                                                                                </small>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li data-target="#custom_carousel" data-slide-to="1" style="border-bottom: 2px solid orange">
+                                                                        <a href="#">
+                                                                            <div style="display: inline-block; width: 40%">
+                                                                                <img src="res/красный_бархат.png" height="20%" width="100%" style="border-radius: 20px">
+                                                                            </div>
+                                                                            <div style="display: inline-block; width: 55%">
+                                                                                <small style="font-family: 'Charm', cursive; color: teal; font-weight: 500!important">
+                                                                                    Red Velvet 20 cm
+                                                                                </small>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li data-target="#custom_carousel" data-slide-to="2" style="border-bottom: 2px solid orange">
+                                                                        <a href="#">
+                                                                            <div style="display: inline-block; width: 40%">
+                                                                                <img src="res/med.png" height="25%" width="100%" style="border-radius: 20px">
+                                                                            </div>
+                                                                            <div style="display: inline-block; width: 55%">
+                                                                                <small style="font-family: 'Charm', cursive; color: teal; font-weight: 500!important">
+                                                                                    Honey cake 24 cm
+                                                                                </small>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li data-target="#custom_carousel" data-slide-to="3" style="border-bottom: 2px solid orange">
+                                                                        <a href="#">
+                                                                            <div style="display: inline-block; width: 40%">
+                                                                                <img src="res/моло_дев.png" height="25%" width="100%" style="border-radius: 20px">
+                                                                            </div>
+                                                                            <div style="display: inline-block; width: 55%">
+                                                                                <small style="font-family: 'Charm', cursive; color: teal; font-weight: 500!important">
+                                                                                    Milk girl   24 cm
+                                                                                </small>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li data-target="#custom_carousel" data-slide-to="4" style="border-bottom: 2px solid orange">
+                                                                        <a href="#">
+                                                                            <div style="display: inline-block; width: 40%">
+                                                                                <img src="res/красный_бархат.png" height="25%" width="100%" style="border-radius: 20px">
+                                                                            </div>
+                                                                            <div style="display: inline-block; width: 55%">
+                                                                                <small style="font-family: 'Charm', cursive; color: teal; font-weight: 500!important">
+                                                                                    Red Velvet 24 cm
+                                                                                </small>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li data-target="#custom_carousel" data-slide-to="5" style="border-bottom: 2px solid orange">
+                                                                        <a href="#">
+                                                                            <div style="display: inline-block; width: 40%">
+                                                                                <img src="res/teramisu.png" height="25%" width="100%" style="border-radius: 20px">
+                                                                            </div>
+                                                                            <div style="display: inline-block; width: 55%">
+                                                                                <small style="font-family: 'Charm', cursive; color: teal; font-weight: 500!important">
+                                                                                    Tiramisu 26 cm
+                                                                                </small>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12" id="register-form" style="display: none">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <!-- Start Carousel -->
+                                                <div id="custom_carousel1" class="carousel slide" data-ride="carousel" data-interval="0">
+                                                    <div class="row clearfix">
+                                                        <div class="col-md-9 col-sm-9 column">
+                                                            <!-- Wrapper for slides -->
+                                                            <div class="carousel-inner">
+                                                                <div class="item active">
+                                                                    <div class="container-fluid">
+                                                                        <div class="row row-eq-height" style="border: 5px solid orange">
+                                                                            <div class="col-md-8">
+                                                                                <img src="res/teramisu_1.png" alt="" class="img img-responsive" style="border-radius: 90px; padding: 5px">
+                                                                            </div>
+                                                                            <div class="col-md-4" style="position: relative;">
+                                                                                <div class="cake_context1">
+                                                                                    <h3 style="font-family: 'Charm', cursive; font-weight: 700; color: teal">Tiramisu portion</h3>
+                                                                                    <p>
+                                                                                    <p style="font-family: 'Charm', cursive; color: teal; font-weight: 500!important">1000 tg </p>
+                                                                                    </p>
+                                                                                </div>
+                                                                                <button class="btn" data-toggle="modal" data-target="#gridSystemModal" style="background-color: orange">
+                                                                                    order
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item">
+                                                                    <div class="container-fluid">
+                                                                        <div class="row row-eq-height">
+                                                                            <div class="col-md-8">
+                                                                                <img src="res/IMG_7163-1024x683.png" alt="" class="img img-responsive" style="border-radius: 90px; padding: 5px">
+                                                                            </div>
+                                                                            <div class="col-md-4" style="position: relative;">
+                                                                                <div class="cake_context1">
+                                                                                    <h3 style="font-family: 'Charm', cursive; font-weight: 700; color: teal">Bagels with cheese</h3>
+                                                                                    <p>
+                                                                                    <p style="font-family: 'Charm', cursive; color: teal; font-weight: 500!important">130 tg</p>
+                                                                                    </p>
+                                                                                </div>
+                                                                                <button class="btn" data-toggle="modal" data-target="#gridSystemModal" style="background-color: orange">
+                                                                                    order
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item">
+                                                                    <div class="container-fluid">
+                                                                        <div class="row row-eq-height">
+                                                                            <div class="col-md-8">
+                                                                                <img src="res/IMG_7103-1024x675.jpg" style="border-radius: 90px; padding: 5px" alt="" class="img img-responsive">
+                                                                            </div>
+                                                                            <div class="col-md-4" style="position: relative;">
+                                                                                <div class="cake_context1">
+                                                                                    <h3 style="font-family: 'Charm', cursive; font-weight: 700; color: teal">Eclair</h3>
+                                                                                    <p>
+                                                                                    <p style="font-family: 'Charm', cursive; color: teal; font-weight: 500!important">300 tg </p>
+                                                                                    </p>
+                                                                                </div>
+                                                                                <button class="btn" data-toggle="modal" data-target="#gridSystemModal" style="background-color: orange">
+                                                                                    order
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item">
+                                                                    <div class="container-fluid">
+                                                                        <div class="row row-eq-height">
+                                                                            <div class="col-md-8">
+                                                                                <img src="res/IMG_7101-1024x611.jpg" style="border-radius: 90px; padding: 5px" alt="" class="img img-responsive">
+                                                                            </div>
+                                                                            <div class="col-md-4" style="position: relative;">
+                                                                                <div class="cake_context1">
+                                                                                    <h3 style="font-family: 'Charm', cursive; font-weight: 700; color: teal">Pie &#171;Bcal Prince&#187;</h3>
+                                                                                    <p>
+                                                                                    <p style="font-family: 'Charm', cursive; color: teal; font-weight: 500!important">1100 tg </p>
+                                                                                    </p>
+                                                                                </div>
+                                                                                <button class="btn" data-toggle="modal" data-target="#gridSystemModal" style="background-color: orange">
+                                                                                    order
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item">
+                                                                    <div class="container-fluid">
+                                                                        <div class="row row-eq-height">
+                                                                            <div class="col-md-8">
+                                                                                <img src="res/IMG_7159-1024x683.jpg" style="border-radius: 90px; padding: 5px" alt="" class="img img-responsive">
+                                                                            </div>
+                                                                            <div class="col-md-4" style="position: relative;">
+                                                                                <div class="cake_context1">
+                                                                                    <h3 style="font-family: 'Charm', cursive; font-weight: 700; color: teal">Samsa with meat and pumpkin (puff)</h3>
+                                                                                    <p>
+                                                                                    <p style="font-family: 'Charm', cursive; color: teal; font-weight: 500!important">100 tg </p>
+                                                                                    </p>
+                                                                                </div>
+                                                                                <button class="btn" data-toggle="modal" data-target="#gridSystemModal" style="background-color: orange">
+                                                                                    order
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item">
+                                                                    <div class="container-fluid">
+                                                                        <div class="row row-eq-height">
+                                                                            <div class="col-md-8">
+                                                                                <img src="res/IMG_7161-1-1024x683.jpg" style="border-radius: 90px; padding: 5px" alt="" class="img img-responsive">
+                                                                            </div>
+                                                                            <div class="col-md-4" style="position: relative;">
+                                                                                <div class="cake_context1">
+                                                                                    <h3 style="font-family: 'Charm', cursive; font-weight: 700; color: teal">Samsa with meat (sand)</h3>
+                                                                                    <p>
+                                                                                    <p style="font-family: 'Charm', cursive; color: teal; font-weight: 500!important">100 tg </p>
+                                                                                    </p>
+                                                                                </div>
+                                                                                <button class="btn" data-toggle="modal" data-target="#gridSystemModal" style="background-color: orange">
+                                                                                    order
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item">
+                                                                    <div class="container-fluid">
+                                                                        <div class="row row-eq-height">
+                                                                            <div class="col-md-8">
+                                                                                <img src="res/IMG_7096-1024x683.jpg" style="border-radius: 90px; padding: 5px" alt="" class="img img-responsive">
+                                                                            </div>
+                                                                            <div class="col-md-4" style="position: relative;">
+                                                                                <div class="cake_context1">
+                                                                                    <h3 style="font-family: 'Charm', cursive; font-weight: 700; color: teal">Cottage cheese cheesecake</h3>
+                                                                                    <p>
+                                                                                    <p style="font-family: 'Charm', cursive; color: teal; font-weight: 500!important">400 tg</p>
+                                                                                    </p>
+                                                                                </div>
+                                                                                <button class="btn" data-toggle="modal" data-target="#gridSystemModal" style="background-color: orange">
+                                                                                    order
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item">
+                                                                    <div class="container-fluid">
+                                                                        <div class="row row-eq-height">
+                                                                            <div class="col-md-8">
+                                                                                <img src="res/IMG_7099-1024x683.jpg" style="border-radius: 90px; padding: 5px" alt="" class="img img-responsive">
+                                                                            </div>
+                                                                            <div class="col-md-4" style="position: relative;">
+                                                                                <div class="cake_context1">
+                                                                                    <h3 style="font-family: 'Charm', cursive; font-weight: 700; color: teal">Cheesecake</h3>
+                                                                                    <p>
+                                                                                    <p style="font-family: 'Charm', cursive; color: teal; font-weight: 500!important">1400 tg </p>
+                                                                                    </p>
+                                                                                </div>
+                                                                                <button class="btn" data-toggle="modal" data-target="#gridSystemModal" style="background-color: orange">
+                                                                                    order
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- End Carousel Inner -->
+                                                            <a class="left carousel-control" href="#custom_carousel1" role="button" data-slide="prev" style="margin-left: -40px;">
+                                                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                                                <span class="sr-only">Previous</span>
+                                                                <span class="fa fa-angle-left" style="color:black"></span>
+                                                            </a>
+                                                            <a class="right carousel-control" href="#custom_carousel1" role="button" data-slide="next" style="margin-right: -40px;">
+                                                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                                                <span class="sr-only">Next</span>
+                                                                <span class="fa fa-angle-right" style="color: black"></span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="col-md-3 col-sm-3 column" style="border: 5px solid orange!important">
+                                                            <div class="controls">
+                                                                <ul class="nav">
+                                                                    <li data-target="#custom_carousel1" data-slide-to="0" class="active" style="border-bottom: 2px solid orange">
+                                                                        <a href="#">
+                                                                            <div style="display: inline-block; width: 40%">
+                                                                                <img src="res/IMG_7100-300x200.jpg" height="25%" width="100%" style="border-radius: 20px">
+                                                                            </div>
+                                                                            <div style="display: inline-block; width: 55%">
+                                                                                <small style="font-family: 'Charm', cursive; color: teal; font-weight: 500!important">
+                                                                                    Tiramisu portion
+                                                                                </small>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li data-target="#custom_carousel1" data-slide-to="1" style="border-bottom: 2px solid orange">
+                                                                        <a href="#">
+                                                                            <div style="display: inline-block; width: 40%">
+                                                                                <img src="res/IMG_7163-300x200.jpg" height="25%" width="100%" style="border-radius: 20px">
+                                                                            </div>
+                                                                            <div style="display: inline-block; width: 55%">
+                                                                                <small style="font-family: 'Charm', cursive; color: teal; font-weight: 500!important">
+                                                                                    Bagels with cheese
+                                                                                </small>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li data-target="#custom_carousel1" data-slide-to="2" style="border-bottom: 2px solid orange">
+                                                                        <a href="#">
+                                                                            <div style="display: inline-block; width: 40%">
+                                                                                <img src="res/IMG_7103-300x198.jpg" height="25%" width="100%" style="border-radius: 20px">
+                                                                            </div>
+                                                                            <div style="display: inline-block; width: 55%">
+                                                                                <small style="font-family: 'Charm', cursive; color: teal; font-weight: 500!important">
+                                                                                    Eclair
+                                                                                </small>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li data-target="#custom_carousel1" data-slide-to="3" style="border-bottom: 2px solid orange">
+                                                                        <a href="#">
+                                                                            <div style="display: inline-block; width: 40%">
+                                                                                <img src="res/IMG_7101-300x179.jpg" height="25%" width="100%" style="border-radius: 20px">
+                                                                            </div>
+                                                                            <div style="display: inline-block; width: 55%">
+                                                                                <small style="font-family: 'Charm', cursive; color: teal; font-weight: 500!important">
+                                                                                    Pie &#171;Black Prince&#187;
+                                                                                </small>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li data-target="#custom_carousel1" data-slide-to="4" style="border-bottom: 2px solid orange">
+                                                                        <a href="#">
+                                                                            <div style="display: inline-block; width: 40%">
+                                                                                <img src="res/IMG_7159-300x200.jpg" height="25%" width="100%" style="" border-radius: 20px>
+                                                                            </div>
+                                                                            <div style="display: inline-block; width: 55%">
+                                                                                <small style="font-family: 'Charm', cursive; color: teal; font-weight: 500!important">
+                                                                                    Samsa with meat and pumpkin (puff)
+                                                                                </small>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li data-target="#custom_carousel1" data-slide-to="5" style="border-bottom: 2px solid orange">
+                                                                        <a href="#">
+                                                                            <div style="display: inline-block; width: 40%">
+                                                                                <img src="res/IMG_7161-1-300x200.jpg" height="25%" width="100%" style="border-radius: 20px">
+                                                                            </div>
+                                                                            <div style="display: inline-block; width: 55%">
+                                                                                <small style="font-family: 'Charm', cursive; color: teal; font-weight: 500!important">
+                                                                                    Samsa with meat (sand)
+                                                                                </small>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li data-target="#custom_carousel1" data-slide-to="6" style="border-bottom: 2px solid orange">
+                                                                        <a href="#">
+                                                                            <div style="display: inline-block; width: 40%">
+                                                                                <img src="res/IMG_7096-300x200.jpg" height="25%" width="100%" style="border-radius: 20px">
+                                                                            </div>
+                                                                            <div style="display: inline-block; width: 55%">
+                                                                                <small style="font-family: 'Charm', cursive; color: teal; font-weight: 500!important">
+                                                                                    Cottage cheese cheesecake
+                                                                                </small>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li data-target="#custom_carousel1" data-slide-to="7" style="border-bottom: 2px solid orange">
+                                                                        <a href="#">
+                                                                            <div style="display: inline-block; width: 40%">
+                                                                                <img src="res/IMG_7099-300x200.jpg" height="25%" width="100%" style="border-radius: 20px">
+                                                                            </div>
+                                                                            <div style="display: inline-block; width: 55%">
+                                                                                <small style="font-family: 'Charm', cursive; color: teal; font-weight: 500!important">
+                                                                                    Cheesecake
+                                                                                </small>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="master_class" id="master_class" style="background-color: orange; margin-top: 0px!important">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-height">
+                    <div class="master_class_div" style="margin-top: 12%;">
+                        <h2 class="" style="color: #57524a;">
+                            Master class
+                        </h2>
+                        <p style="color: black; text-transform: uppercase; font-family: 'Charm', cursive;">
+                            from the best confectioners
+                        </p>
+                        <p>
+                        <p style="color: black;font-family: 'Charm', cursive;">Every Saturday from 10:00 to 14:00 Master classes from the best confectioners of the world.</p>
+                        </p>
+                        <button class="btn" style="margin-bottom: 50px;" data-toggle="modal" data-target="#gridSystemModal" ;>
+                            sign up for a master class
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-height">
+                    <img src="res/cake-masterclass-final.png" class="img img-responsive" alt="" style="border-radius: 90px">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="personal_cake" id="personal_cake" style="background-color: #EEE9E9; padding-bottom: 80px">
+        <div class="container">
+            <div class="row">
+                <h2>Personal cakes</h2>
+                <div class="col-md-4">
+                    <img src="res/menulogo.png" style="widows:200px; height:200px;" />
+                    <h3 style="font-family: 'Pattaya', sans-serif; color: red">Menu</h3>
+                    <form class="" method="get" action="menu.pdf">
+                        <button type="submit" class="btnn" style="font-family: 'Pattaya', sans-serif; color: green">download catalog </button>
+                    </form>
+                </div>
+                <div class="col-md-4">
+                    <img src="res/deliverylogo.png" style="widows:200px; height:200px;" />
+                    <h3 style="font-family: 'Pattaya', sans-serif; color: red">Delivery</h3>
+                    <form class="" method="get" action="menu.pdf">
+                        <button type="submit" class="btnn" style="font-family: 'Pattaya', sans-serif; color: green" data-toggle="modal" data-target="#login-modal">download catalog </button>
+                    </form>
+                </div>
+                <div class="col-md-4">
+                    <img src="res/orderlogo.png" style="widows:200px; height:200px;" />
+                    <h3 style="font-family: 'Pattaya', sans-serif; color: red">Place an order</h3>
+                    <button type="submit" class="btnn" data-toggle="modal" data-target="#gridSystemModal" style="font-family: 'Pattaya', sans-serif; color: green">order </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="feedback" id="feedback" style="background-color: orange;">
+        <div class="container">
+            <div class="row">
+                <h2 style="text-align: center; margin-bottom: 100px">
+                    Feedback
+                </h2>
+            </div>
+            <div class="row">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active" style="border: 5px solid orange">
+                            <div class="container">
+                                <div class="row row-eq-height">
+                                    <div class="col-md-4">
+                                        <img src="res/lewa.jpg" class="img img-responsive" style="height: 100%; width: 100%; border-radius: 60px">
+                                    </div>
+                                    <div class="col-md-7" style="">
+                                        <div class="feedback_content" style="">
+                                            <i>
+                                                <b>
+                                                    <p style=" padding-right: 20px; font-style: italic; font-size: 18px !important">
+                                                    <p>I love spending time with friends in a pleasant environment. I was very happy when I found out about the hall for guests in the confectionery studio. Now I am a frequent guest here not only because of the good service, but also here is the most delicious tiramisse that I had to spend.</p>
+                                                    </p>
+                                                    </p>
+                                                </b>
+                                            </i>
+                                            <p style="text-align: right; color: black; font-family: 'Pattaya', sans-serif">
+                                                Robert Lewandowski
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="container">
+                                <div class="row row-eq-height">
+                                    <div class="col-md-4">
+                                        <img src="res/syrym.jpg" class="img img-responsive" style="height: 100%; width: 100%; border-radius: 60px;">
+                                    </div>
+                                    <div class="col-md-7" style="">
+                                        <div class="feedback_content" style="">
+                                            <i>
+                                                <b>
+                                                    <p style=" padding-right: 20px; font-style: italic; font-size: 18px !important">
+                                                    <p>We often hold our meetings, and we muffle our companions into our office. By tradition, do not let them go without treats. Previously, we had to run, look for ourselves, and now we just order everything in Sweet Treets. We do not worry about quality, and we always advise our friends too.</p>
+                                                </b>
+                                            </i>
+                                            <p style="text-align: right; color: black; font-family: 'Pattaya', sans-serif">
+                                                Syrym Berdaliyev
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                        <span class="fa fa-angle-left" style="color: black"></span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                        <span class="fa fa-angle-right" style="color: black"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about" id="absolute" style="background-color: #EEE9E9">
+        <h2 class="text-center">About us</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <img src="res/pie.jpg" alt="" style="border-radius: 40px">
+                    <h3 class="text-center">
+                        cooked
+                        <br> more than <span class="down" style="color: orange"> 20 000</span> cakes
+                    </h3>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="res/pie1.jpg" alt="" style="border-radius: 40px">
+                    <h3 class="text-center">
+                        Of which more than <span class="down" style="color: orange">2 000 </span>
+                        <br> themed and customized
+                    </h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1 qwe">
+                    <p>We are open to any kind of orders and cooperation for the manufacture of complex and unusual <span class="test" style="color: orange">(in size, in shape, in subject) </span> cakes for large-scale events.</p>
+                    <br>
+                    <p>If you have any creative cake ideas, then we will be happy to surprise your guests with you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="reservation" id="reservation" style="background-image: url(res/reserve.jpg)">
+        <div style="height: 100%; background-color: rgba(81,60,36,0.8);padding-top: 30px; padding-bottom: 100px">
+            <div class="container">
+                <div class="row">
+                    <h2>Immerse yourself in the atmosphere of <br>  our hall</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2" style="height: 400px; background-image: url(res/reser.png); background-size: cover;">
+                        <button class="left_button" style="position: absolute; bottom: -20px;left: 5%;background-color: orange!important; border: 3px solid red!important" data-toggle="modal" data-target="#gridSystemModal">reserve</button>
+                        <form class="" method="get" action="menu.pdf">
+                            <button class="right_button" style="position: absolute; bottom: -20px; right: 5%; background-color: orange!important; border: 3px solid red!important">menu </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="converter" style="background-color:#808080;">
+        <div>
+            <div class="merey1">
+                Calory Calculator
+            </div>
+            <div class="merey2">
+                Choose type of cake or pie!
+            </div>
+            <div class="row" style="margin:auto; margin-top:10px; width:92%;" id="cake-list"></div>
+            <div id="cake-detail" style="color:black; font-size:1em; width:92%; margin:auto; margin-top:10px;"></div>
+        </div>
+    </section>
+    <footer style="background-image: url(res/almaty.jpg); ">
+        <div style="background-color: rgba(0,0,0,0.5); width: 100%; height: 100%;padding-bottom: 30px">
+            <div>
+                    <div class="row">
+                        <div style="width:50%; float:left; padding:30px;">
+                            <h2 style=" border-bottom:5px solid orange">Place an order</h2>
+                            <p style="padding-left:30px;">
+                                To order, please <br>send us your contacts.
+                            </p>
+                            <button class="btn" data-toggle="modal" data-target="#gridSystemModal" style="margin-left:30px; font-weight: 400 !important;background-color: orange!important; border: 3px solid red!important">
+                                order
+                            </button>
+                        </div>
+                        <div style="width:50%; float:left; padding:30px;">
+                            <h2 style=" border-bottom:5px solid orange">Clock</h2>
+                            <p style="padding-left:30px;">
+                                Actual time:
+                                <input id="myClock" style="background:none; border:none; font-weight:bold;" />
+                            </p>
+                            <p style="padding-left:30px;">
+                                Time spent on this website:
+                                <input id="myTimer" style="background:none; border:none; font-weight:bold;" />
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div style="width:100%; float:left; padding-left:30px;">
+                            <h2 style=" border-bottom:5px solid orange">Contacts</h2>
+                            <p style="padding-left:30px; display: inline-block;">Full name: Merey Mukhtar</p><br>
+                            <p style="padding-left:30px; display: inline-block;">Index number: EX042</p><br>
+                            <p style="padding-left:30px; display: inline-block;">Phone: +48(789)21-95-21</p><br>
+                            <p style="padding-left:30px; display: inline-block;">Email: mukhtarov.merey@gmail.com</p><br>
+                            <p style="padding-left:30px; display: inline-block;">Adress: Kornicka 5</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="jsconverter.js"></script>
+</body>
+</html>

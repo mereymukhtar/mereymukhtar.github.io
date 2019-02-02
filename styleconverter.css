@@ -1,0 +1,38 @@
+﻿.merey{
+    background-color: #808080;
+    width:100%;
+}
+
+.merey1 {
+    margin: auto;
+    background-color: #ffd800;
+    width: 92%;
+    height: 60px;
+    text-align: center;
+    color: black;
+    font-size: 3em;
+    border-radius:10px;
+}
+
+.merey2 {
+    margin: auto;
+    margin-top: 10px;
+    background-color: #ffd800;
+    width: 92%;
+    height: 50px;
+    text-align: center;
+    color: black;
+    font-size: 2em;
+    border-radius: 10px;
+}
+
+.cake {
+    width: 200px;
+    height: 200px;
+    opacity: 0.5;
+}
+
+    .cake:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
